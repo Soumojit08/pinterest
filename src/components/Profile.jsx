@@ -58,16 +58,11 @@ const Profile = () => {
             ))}
           </div>
         </div>
-        {/* Grid Placeholder */}
-        <div className="max-w-6xl mx-auto mt-8 px-4 grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[...Array(8)].map((_, i) => (
-            <div
-              key={i}
-              className="bg-gray-100 rounded-xl h-40 flex items-center justify-center text-gray-400 text-2xl font-bold"
-            >
-              Pin {i + 1}
-            </div>
-          ))}
+        {/* No pins message */}
+        <div className="flex flex-col items-center justify-center mt-16">
+          <span className="text-2xl text-gray-400 font-semibold">
+            No pins yet
+          </span>
         </div>
       </div>
     </div>

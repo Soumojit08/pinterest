@@ -6,6 +6,12 @@ import SignUpPage from "./components/SignUp";
 import ProtectedRoute from "./components/ProtectedRoute";
 import LandingPage from "./components/LandingPage";
 import Profile from "./components/Profile";
+import Home from "./pages/Home";
+import Explore from "./pages/Explore";
+import Create from "./pages/Create";
+import Saved from "./pages/Saved";
+import FindFriends from "./pages/FindFriends";
+import Settings from "./pages/Settings";
 
 const App = () => {
   const { isLoaded, isSignedIn } = useAuth();
@@ -41,6 +47,54 @@ const App = () => {
         element={
           <ProtectedRoute>
             <Profile />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/home"
+        element={
+          <ProtectedRoute>
+            <Home />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/explore"
+        element={
+          <ProtectedRoute>
+            <Explore />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/create"
+        element={
+          <ProtectedRoute>
+            <Create />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/saved"
+        element={
+          <ProtectedRoute>
+            <Saved />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/find-friends"
+        element={
+          <ProtectedRoute>
+            <FindFriends />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/settings"
+        element={
+          <ProtectedRoute>
+            <Settings />
           </ProtectedRoute>
         }
       />
