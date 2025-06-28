@@ -3,7 +3,6 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { useAuth } from "@clerk/clerk-react";
 import SignInPage from "./components/SignIn";
 import SignUpPage from "./components/SignUp";
-import Dashboard from "./components/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import LandingPage from "./components/LandingPage";
 import Profile from "./components/Profile";
@@ -24,21 +23,21 @@ const App = () => {
       <Route
         path="/"
         element={
-          isSignedIn ? <Navigate to="/dashboard" replace /> : <LandingPage />
+          isSignedIn ? <Navigate to="/profile" replace /> : <LandingPage />
         }
       />
       <Route path="/sign-in" element={<SignInPage />} />
       <Route path="/sign-up" element={<SignUpPage />} />
       <Route
-        path="/dashboard"
+        path="/profile"
         element={
           <ProtectedRoute>
-            <Dashboard />
+            <Profile />
           </ProtectedRoute>
         }
       />
       <Route
-        path="/profile"
+        path="/dashboard"
         element={
           <ProtectedRoute>
             <Profile />

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { UserButton } from "@clerk/clerk-react";
 import { Search, Bell, MessageCircle } from "lucide-react";
+import { FaPinterest } from "react-icons/fa";
 
 const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -16,10 +17,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         {/* Left side - Logo */}
         <div className="flex items-center">
-          <div className="w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center mr-3">
-            <span className="text-white font-bold text-base">P</span>
-          </div>
-          <span className="text-xl font-bold text-gray-900">Pinterest</span>
+          <FaPinterest size={32} color="e7000b"/>
         </div>
 
         {/* Center - Search Bar */}
