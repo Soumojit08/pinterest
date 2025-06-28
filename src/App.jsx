@@ -12,6 +12,7 @@ import Create from "./pages/Create";
 import Saved from "./pages/Saved";
 import FindFriends from "./pages/FindFriends";
 import Settings from "./pages/Settings";
+import Layout from "./components/Layout";
 
 const App = () => {
   const { isLoaded, isSignedIn } = useAuth();
@@ -38,7 +39,9 @@ const App = () => {
         path="/profile"
         element={
           <ProtectedRoute>
-            <Profile />
+            <Layout>
+              <Profile />
+            </Layout>
           </ProtectedRoute>
         }
       />
@@ -46,7 +49,9 @@ const App = () => {
         path="/dashboard"
         element={
           <ProtectedRoute>
-            <Profile />
+            <Layout>
+              <Profile />
+            </Layout>
           </ProtectedRoute>
         }
       />
@@ -54,7 +59,9 @@ const App = () => {
         path="/home"
         element={
           <ProtectedRoute>
-            <Home />
+            <Layout>
+              <Home />
+            </Layout>
           </ProtectedRoute>
         }
       />
@@ -62,7 +69,9 @@ const App = () => {
         path="/explore"
         element={
           <ProtectedRoute>
-            <Explore />
+            <Layout>
+              <Explore />
+            </Layout>
           </ProtectedRoute>
         }
       />
@@ -70,7 +79,9 @@ const App = () => {
         path="/create"
         element={
           <ProtectedRoute>
-            <Create />
+            <Layout>
+              <Create />
+            </Layout>
           </ProtectedRoute>
         }
       />
@@ -78,7 +89,9 @@ const App = () => {
         path="/saved"
         element={
           <ProtectedRoute>
-            <Saved />
+            <Layout>
+              <Saved />
+            </Layout>
           </ProtectedRoute>
         }
       />
@@ -86,7 +99,9 @@ const App = () => {
         path="/find-friends"
         element={
           <ProtectedRoute>
-            <FindFriends />
+            <Layout>
+              <FindFriends />
+            </Layout>
           </ProtectedRoute>
         }
       />
@@ -94,7 +109,9 @@ const App = () => {
         path="/settings"
         element={
           <ProtectedRoute>
-            <Settings />
+            <Layout>
+              <Settings />
+            </Layout>
           </ProtectedRoute>
         }
       />
