@@ -1,0 +1,22 @@
+import React from "react";
+import { useAuth, RedirectToSignIn } from "@clerk/clerk-react";
+
+const ProtectedRoute = ({ children }) => {
+  const { isLoaded, isSignedIn } = useAuth();
+
+  if (!isLoaded) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
+      </div>
+    );
+  }
+
+  if (!isSignedIn) {
+    return <RedirectToSignIn />;
+  }
+
+  return children;
+};
+
+export default ProtectedRoute;
